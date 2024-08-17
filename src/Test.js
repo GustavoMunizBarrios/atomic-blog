@@ -1,3 +1,9 @@
+/**
+ * A slow component that renders a list of 10,000 words.
+ * This component is intentionally slow to demonstrate the impact of slow rendering on the parent component.
+ *
+
+ */
 import { useState } from "react";
 
 function SlowComponent() {
@@ -13,6 +19,14 @@ function SlowComponent() {
     </ul>
   );
 }
+/**
+ * A counter component that renders a button to increase the count and a child component.
+ * The child component isn't re-rendered every time the count changes, that's because
+ * SlowComponent is already been created before the Counter component re-rendered,
+ * therefore SlowComponent cannot be affected by the state change in the Counter
+ *
+ * children - The child component to render.
+ */
 
 function Counter({ children }) {
   const [count, setCount] = useState(0);
