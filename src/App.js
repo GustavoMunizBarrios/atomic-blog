@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
 import { PostProvider, usePosts } from "./PostContext";
-import Test from "./Test";
+// import Test from "./Test";
 
 function createRandomPost() {
   return {
@@ -134,7 +134,7 @@ function List() {
           </li>
         ))}
       </ul>
-      <Test />
+      {/* <Test /> */}
     </>
   );
 }
