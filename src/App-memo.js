@@ -45,9 +45,9 @@ function App() {
   const archiveOptions = useMemo(() => {
     return {
       show: false,
-      title: "Post archive in addition to main posts",
+      title: `Post archive in addition to ${posts.length} main posts`,
     };
-  }, []); // An empty array at the end means that the value only be computed in the beginning, so it never change
+  }, [posts.length]); // An empty array at the end means that the value only be computed in the beginning, so it never change, in this case every time posts.length changes archiveOptions will be recalculated and Archive component will be re-render
 
   return (
     <section>
